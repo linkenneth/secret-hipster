@@ -1,0 +1,246 @@
+\documentclass[twoside,draft]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[margin=0.5cm, a4paper, landscape]{geometry}
+\usepackage{setspace}
+\usepackage{multicol}
+
+
+\DeclareMathOperator{\arccot}{arccot}
+\singlespace
+\pagestyle{empty}
+
+\begin{document}
+\title{Math 53: Midterm Notesheet}
+\author{Kenneth Lin}
+\date{\today}
+
+\begin{multicols}{3}
+
+  \textbf{Basic Identities:}
+  \begin{align*}
+    \sin^2\theta + \cos^2\theta = 1;
+    1 + \tan^2\theta = \sec^2\theta \\
+    1 + \cot^2\theta = \csc^2\theta;
+    \sin^2\theta = \frac{1-\cos2\theta}{2} \\
+    \cos^2\theta = \frac{1+\cos2\theta}{2};
+    \tan^2\theta = \frac{1-\cos2\theta}{1+\cos2\theta} \\
+    \sin \theta = \frac{e^{-i\theta}-e^{i\theta}}{2i};
+    \cos \theta = \frac{e^{-i\theta}+e^{i\theta}}{2}; \\
+    \sin(u+v) = \sin u \cos v + \sin v \cos u \\
+    \cos(u+v) = \cos u \cos v - \sin u \sin v \\
+    \tan(u+v) = \frac{\tan u + \tan v}{1 - \tan u \tan v} \\
+    \sin u + \sin v = 2 \sin ({u+v \over 2}) \cos ({u-v \over 2}) \\
+    \sin u - \sin v = 2 \sin ({u-v \over 2}) \cos ({u+v \over 2}) \\
+    \cos u + \cos v = 2 \cos ({u+v \over 2}) \cos ({u-v \over 2}) \\
+    \cos u - \cos v = 2 \sin ({v+u \over 2}) \sin ({v-u \over 2}) \\
+    \sin u \cos v = {1 \over 2}[\sin(u+v) + \sin(u-v)] \\
+    \sin u \sin v = {1 \over 2}[\cos(u-v) - \cos(u+v)] \\
+    \cos u \cos v = {1 \over 2}[\cos(u+v) + \cos(u-v)]
+  \end{align*}
+
+  \textbf{Integration techniques:}
+  \begin{enumerate}
+  \item Substitution
+  \item Integration by parts
+  \item Taylor series representation
+  \item Trig/trig-like substitutions
+  \item Partial fractions
+  \end{enumerate}
+
+  \textbf{Taylor/Maclaurin Series:}
+  \begin{align*}
+    T_n(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n \\
+    \ln(1-x) = -\sum_{n=1}^{\infty} \frac{x^n}{n} \text{ for } -1\leq x < 1 \\
+    \ln(1+x) = \sum_{n=1}^{\infty} (-1)^{n+!} \frac{x^n}{n} \text{ for } -1 < x\leq 1 \\
+    \frac{1}{1-x} = \sum_{n=0}^{\infty} x^n \text{ for } |x| < 1 \\
+    \sqrt{1+x} = \sum_{n=0}^{\infty} \frac{(-1)^n(2n)!}{(1-2n)(n!)^2(4^n)}x^n \\
+    (1+x)^{\alpha} = \sum_{n=0}^{\infty} {\alpha \choose n} x^n \text{ where } {\alpha \choose n} = {\alpha(\alpha-1)\cdots(\alpha-n+1) \over n!} \\
+    e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!};
+    \sin x = \sum_{n=0}^{\infty} \frac{(-1)^n}{(2n+1)!}x^{2n+1};
+    \cos x = \sum_{n=0}^{\infty} \frac{(-1)^n}{(2n)!}x^{2n} \\
+    \arctan x = \sum_{n=0}^{\infty} \frac{(-1)^n}{2n+1}x^{2n+1} \text{ for } |x| \leq 1
+  \end{align*}
+
+  \textbf{Differential Equations:}
+  if $\frac{dy}{dx} + P(x)y = Q(x)$ then multiply by $I(x) = e^{\int P(x) dx}$;
+  if $P(x)\frac{d^2y}{dx^2} + Q(x)\frac{dy}{dx} + R(x)y = 0$ then homogeneous and use
+  auxiliary equation $ar^2 + br + c = 0$ then
+  $y = c_1e^{r_1x} + c_2e^{r_2x}$,
+  $y = c_1e^{rx} + c_2xe^{rx}$,
+  $y = e^{\alpha x}(c_1 \cos \beta x + c_2 \sin \beta x)$;
+  if $ay'' + by' + cy = G(x)$ then solve complementary equation $ay'' + by' + cy = 0$
+  then find a particular solution $y_p$ so $y(x) = y_p(x) + y_c(x)$
+  Undetermined Coefficients:
+  $y_p(x) = e^{kx}Q(x)\cos m x + e^{kx}R(x)\sin mx$ Multiply by x if necessary.
+  Variation of parameters:
+  $u_1'y_1 + u_2'y_2 = 0$ and $a(u_1'y_1' + u_2'y_2') = G$
+
+  \textbf{2D Parametric Equations:}
+  \begin{align*}
+    \frac{dy}{dx} = \frac{\frac{dy}{d\theta}}{\frac{dx}{d\theta}} =
+    \frac{\frac{dr}{d\theta} \sin \theta + r \cos \theta}{\frac{dr}{d\theta} \cos \theta - r \sin \theta}; \\
+    L = \int_a^b \sqrt{r^2 + {dr \over d\theta}^2} d\theta;
+    A = \int_{\alpha}^{\beta} {1 \over 2} r^2 \theta d\theta
+  \end{align*}
+
+  \textbf{Basic Integrals/Derivatives:}
+  \begin{align*}
+    \int a^x dx = {a^x \over \ln a} ;
+    \frac{d}{dx}(c^{ax}) = c^{ax} a \ln c \\
+    \int \log x dx = x \log x - x ;
+    \int \log_a x dx = x \log_a x - {x \over \log a} \\
+    \int \tan x dx = -\ln |\cos x| = \ln |\sec x| ;
+    \frac{d}{dx}(\tan x) = \sec^2 x \\
+    \int \cot x dx = \ln |\sin x| ;
+    \frac{d}{dx}(\cot x) = -\csc^2 x \\
+    \int \sec x dx = \ln |\sec x + \tan x| ;
+    \frac{d}{dx}(\sec x) = \sec x \tan x \\
+    \int \csc x dx = - \ln |\csc x + \cot x| ;
+    \frac{d}{dx}(\csc x) = -\csc x \cot x \\
+    \int \sin^n x dx = -{\sin^{n-1} x \cos x \over n} + {n-1 \over n} \int \sin^{n-2} x dx \\
+    \int \cos^n x dx = {\cos^{n-1} x \sin x \over n} + {n-1 \over n} \int \cos^{n-2} x dx \\
+    \int \arcsin x dx = x \arcsin x + \sqrt{1-x^2} \\
+    \frac{d}{dx}(\arcsin x) = {1 \over \sqrt{1-x^2}} \\
+    \int \arccos x dx = x \arccos x - \sqrt{1-x^2} \\
+    \frac{d}{dx}(\arccos x) = -{1 \over \sqrt{1-x^2}} \\
+    \int \arctan x dx = x \arctan x - {1 \over 2} \ln |1+x^2| \\
+    \frac{d}{dx}(\arctan x) = {1 \over 1+x^2} \\
+    \int \arccot x dx = x \arccot x + {1 \over 2} \ln |1+x^2| \\
+    \frac{d}{dx}(\arccot x) = -{1 \over 1+x^2} \\
+  \end{align*}
+
+  \textbf{Vectors:}
+  \begin{align*}
+    \vec{a} \cdot \vec{b} = |a||b| \cos \theta; \text{comp}_a \vec{b} = {\vec{a} \cdot \vec{b} \over |\vec{a}|};
+    \text{proj}_a \vec{b} = ({\vec{a} \cdot \vec{b} \over |\vec{a}|}){\vec{a} \over |\vec{a}|} \\
+    |\vec{a} \times \vec{b}| = |\vec{a}| |\vec{b}| \sin \theta = A_{\text{parallel}} = {1 \over 2} A_{\text{tri}};
+    \vec{a} \times \vec{b} = -\vec{b} \times \vec{a} \\
+    \vec{a} \times (\vec{b} \times \vec{c}) = (\vec{a} \cdot \vec{c}) \vec{b} - (\vec{a} \cdot \vec{b}) \vec{c};
+    V_{parallelepiped} = |\vec{a} \cdot (\vec{b} \times \vec{c})| \\
+    \text{Line: } \vec{r} = \vec{r}_0 + t \vec{v}; D = \frac{|ax_1+by_1+cz_1+d|}{\sqrt{a^2+b^2+c^2}} \\
+    \text{Plane: } \vec{n} \cdot (\vec{r} - \vec{r}_0) = 0 \text{ or } ax + by + cz + d = 0 \\
+    L = \int_a^b |\vec{r}'(t)| dt \\
+  \end{align*}
+
+  \textbf{Continuity/Differentiability:}
+  $f$ is continuous if for every number $\epsilon > 0$ there is a $\delta > 0$ such that
+  if $\vec{x} \in D$ and $0 < |\vec{x}-\vec{a}| < \delta$ then $|f( \vec{x}-L| )< \epsilon$ \\
+  $f$ is differentiable at $(a,b)$ if $\Delta z = f_x(a,b) \Delta x + f_y(a,b) \Delta y + \epsilon_1 \Delta x + \epsilon_2 \Delta y$
+  where $\epsilon_1 \epsilon_2 \rightarrow 0$ as $(\Delta x, \Delta y) \rightarrow (0,0)$. \\
+  Tangent Plane: $z - z_0 = f_x(x_0,y_0)(x-x_0) + f_y(x_0,y_0)(y-y_0)$ \\
+  Total differential: $dz = f_x(x,y)dx + f_y(x,y)dy = \frac{\partial z}{\partial x} dx + \frac{\partial z}{\partial y} dy$ \\
+  Chain rule: $\frac{dz}{dt} = \frac{\partial f}{\partial t} \frac{dx}{dt} + \frac{\partial f}{\partial y} \frac{dy}{dt}$ \\
+  CR w/ $x = g(s,t), y=h(s,t)$: $\frac{\partial z}{\partial s} = \frac{\partial z}{\partial x} \frac{\partial x}{\partial s}
+  + \frac{\partial z}{\partial y} \frac{\partial y}{\partial s}$ \\
+  and $\frac{\partial z}{\partial t} = \frac{\partial z}{\partial x} \frac{\partial x}{\partial t}
+  + \frac{\partial z}{\partial y} \frac{\partial y}{\partial t}$ \\
+  Implicit Differentiation: if $F(x,y)=0$, then $\frac{dy}{dx} = -\frac{\frac{\partial F}{\partial x}}{\frac{\partial F}{\partial y}}$ \\
+  Gradient = $\vec{\nabla}f(x,y,z) = \langle f_x, f_y, f_z \rangle$;
+  Directional Derivative: $D_u f(x,y,z) = \vec{\nabla}f(x,y,z) \cdot \vec{u}$, max at $\vec{u}$ in direction of $\vec{\nabla}f(\vec{x})$ \\
+  TP to lev. surf: $\vec{\nabla}F \cdot \vec{r}'(t) = 0$ gives tangent plane with normal vector $\vec{\nabla}F(x_0,y_0,z_0)$ \\
+  also, $F_x(x_0,y_0,z_0)(x-x_0) + F_y(x_0,y_0,z_0)(y-y_0) + F_z(x_0,y_0,z_0)(z-z_0) = 0$ \\
+
+  Min/max/saddle: if (a,b) is a critical point, then let $D(a,b) = \left|
+    \begin{matrix}
+      f_{xx} & f_{xy} \\
+      f_{yx} & f_{yy}
+    \end{matrix} \right| $ \\
+  $D > 0 \wedge f_{xx}(a,b) > 0 \Rightarrow f(a,b)$ is a min \\
+  $D > 0 \wedge f_{xx}(a,b) < 0 \Rightarrow f(a,b)$ is a max; $D < 0 \Rightarrow f(a,b)$ is neither \\
+  Integral bounding: if $m \leq f(x,y) \leq M$ for all (x,y) in D then $mA(D) \leq \iint_D f(x,y) dA \leq MA(D)$ \\
+  Polar: $\iint_Rf(x,y)dA = \int_{\alpha}^{\beta} \int_{h_1(\theta)}^{h_2(\theta)} f(r \cos \theta, r \sin \theta) r dr d\theta$ \\
+
+  \textbf{Transformations:}
+  Cylindrical: $x = \cos \theta, y = \sin \theta, z = z$
+  (Use for things with axial symmetry) \\
+  $\iiint_E f(x,y,z) dV = \\
+  \int_{\alpha}^{\beta} \int_{h_1(\theta)}^{h_2(\theta)} \int_{u_1(r \cos \theta, r \sin \theta)}^{u_2(r \cos \theta, r \sin \theta)} f(r \cos \theta, r \sin \theta, z) r dr dz d\theta$ \\
+  Spherical: $z = \rho \cos \phi, r = \rho \sin \phi$ \\
+  $\therefore x = \rho \sin \phi \cos \theta, y = \rho \sin \phi \sin \theta, \rho^2 = x^2 + y^2 + z^2$ \\
+  ($\phi$ is angle between positive z and point) \\
+  (Use for things with symmetry about a point) \\
+  $\int_c^d \int_{\alpha}^{\beta} \int_a^b f(\rho \sin \phi \cos \theta, \rho \sin \phi \sin \theta, \rho \cos \theta) \rho^2 \sin \phi d\rho d\theta d\phi$ \\
+  Jacobian: $\frac{\partial(x,y)}{\partial(u,v)} = \left|
+    \begin{matrix}
+      \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} \\
+      \frac{\partial y}{\partial u} & \frac{\partial y}{\partial v}
+    \end{matrix} \right| $ \\
+  General transformation: $\iint_R f(x,y,z) dV = \\
+  \iiint_S f(x(u,v,w),y(u,v,w),z(u,v,w)) \left| \frac{\partial(x,y,z)}{\partial(u,v,w)} \right| du dv dw$ \\
+
+  \textbf{Visualization: }
+  Try making volume have a well-defined base in 2D. Draw cross-section
+  planes for each coordinate plane. Otherwise, try firing
+  lasers parallel to coordinate axis to determine limits. To integrate, try
+  substitution into different coordinate systems.
+
+  \textbf{Miscellaneous:}
+  Volume: $V(E) = \iiint_EdV$;
+  Mass: $m = \iiint_E \rho(x,y,z) dV$ \\
+  Moments: $M_{yz} = \iiint_E x \rho(x,y,z)dV$;
+  Center of Mass: $(\bar{x},\bar{y},\bar{z}) \text{ where } \bar{x} = M_{yz}/m$ \\
+  Moments of Inertia: $I_x = \iiint_E (y^2+z^2) \rho(x,y,z) dV$ \\
+  Total Electric Charge: $Q = \iiint_E \sigma(x,y,z)dV$ \\
+  Probability - Joint Density: $P((X,Y,Z) \in E) = \iiint_E f(x,y,z)dV$ \\
+
+  \textbf{17: Ideal Gas Law}
+  \begin{align*}
+    \Delta l = \alpha l_0 \Delta T;
+    \Delta V = \beta V_0 \Delta T \\
+    \Delta V = V_0 [3 \alpha \Delta T + 3 (\alpha \Delta T)^2 +
+    (\alpha \Delta T)^3] \\
+    \Delta V = V_0 (1 + \alpha \Delta T)^3 - V_0;
+    \beta \approx 3 \alpha \\
+    \Delta l = {1 \over E} {F \over A} l_0 \text{ (stress) };
+  \end{align*}
+
+  \textbf{18: Kinetic Theory of Gases}
+  \begin{align*}
+    \bar{K}_{trans} = \frac{1}{2} m \bar{v^2} = \frac{3}{2} k_B T \\
+    v_{rms} = \sqrt{\frac{3k_BT}{m}} \\
+    \int_0^\infty f(v) dv = N \\
+    \bar{v} = \frac{\int_0^\infty vf(v) dv}{N} = \sqrt{\frac{8k_BT}{\pi m}} \\
+    v_p = \sqrt{\frac{2k_BT}{m}} \\
+    \left( P+\frac{a}{(V/n)^2} \right) \left( \frac{V}{n}-b \right) = RT \\
+    \text{humid } = \frac{\text{part. P}}{\text{sat. vap. P}} \\
+    \text{mean free path: } l_M = \frac{1}{4\pi\sqrt{2}r^2(N/V)} \\
+    f(v) = 4 \pi N \left( \frac{m}{2 \pi k_BT} \right)^{3/2} v^2
+  e^{-\frac{mv^2}{2k_BT}} \\
+  \end{align*}
+
+  \textbf{19: Heat \& First Law}
+  \begin{align*}
+    E_{int} = \frac{d}{2} nRT;
+    E_{int} = Q - W \\
+    Q = mL;
+    dQ = mcdT \\
+    W = \int_{V_A}^{V_B} P dV = \int_{l_A}^{l_B} \vec{F} \cdot d \vec{l} \\
+    \text{(isotherm) } W = nRT \ln \frac{V_B}{V_A} \\
+    \text{(isochoric, free exp.) } W = 0 \\
+    \text{(isobaric) } W = P \Delta V; \text{(adiabatic) } W = -\Delta E_{int} \\
+    C_P - C_V = R; C_V = \frac{d}{2} R \\
+    P_1V_1^\gamma = P_2V_2^\gamma; \gamma = \frac{C_P}{C_V} \\
+    \frac{dQ}{dt} = -kA \frac{dT}{dx} \text{ (cond.)} \\
+    \frac{\Delta Q}{\Delta t} = \epsilon \sigma A T^4 \text{ (rad.)} \\
+  \end{align*}
+
+  \textbf{20: Second Law}
+  \begin{align*}
+    e = \frac{W}{Q_H} = \frac{Q_H - Q_L}{Q_H} = 1 - \frac{Q_L}{Q_H} \\
+    = 1 - \frac{T_L}{T_H} \text{ (carnot)} \\
+    \text{Carnot = 2 $\times$ isotherm + 2 $\times$ adiabatic} \\
+    COP = \frac{Q_L}{W} \text{ (refridge} \\
+    = \frac{T_L}{T_H - T_L} \text{ (Carnot)} \\
+    = \frac{Q_H}{W} \text{ (heat pump)} \\
+    dS = \frac{dQ}{T} \text{ (state var.)} \\
+    \text{(def. for reversible process)} \\
+    \Delta S \geq 0 \text{ (spontaneous)} \\
+    S = k \ln W, W = \text{ \# microstates} \\
+  \end{align*}
+
+\end{multicols}
+
+\end{document}

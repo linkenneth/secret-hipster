@@ -1,0 +1,105 @@
+\message{ !name(cheat.tex)}\documentclass[twoside,draft]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[margin=0.5cm, a5paper, landscape]{geometry}
+\usepackage{setspace}
+\usepackage{multicol}
+
+
+\DeclareMathOperator{\arccot}{arccot}
+\singlespace
+\pagestyle{empty}
+
+\begin{document}
+
+\message{ !name(cheat.tex) !offset(-3) }
+
+\title{Math 53: Midterm Notesheet}
+\author{Kenneth Lin}
+\date{\today}
+
+\begin{multicols}{3}
+
+  \textbf{Basic Identities:}
+  \begin{align*}
+    \sin^2\theta + \cos^2\theta = 1;
+    1 + \tan^2\theta = \sec^2\theta \\
+    1 + \cot^2\theta = \csc^2\theta;
+    \sin^2\theta = \frac{1-\cos2\theta}{2} \\
+    \cos^2\theta = \frac{1+\cos2\theta}{2};
+    \tan^2\theta = \frac{1-\cos2\theta}{1+\cos2\theta} \\
+    \sin \theta = \frac{e^{-i\theta}-e^{i\theta}}{2i};
+    \cos \theta = \frac{e^{-i\theta}+e^{i\theta}}{2}; \\
+    \sin(u+v) = \sin u \cos v + \sin v \cos u \\
+    \cos(u+v) = \cos u \cos v - \sin u \sin v \\
+    \tan(u+v) = \frac{\tan u + \tan v}{1 - \tan u \tan v} \\
+    \sin u + \sin v = 2 \sin ({u+v \over 2}) \cos ({u-v \over 2}) \\
+    \sin u - \sin v = 2 \sin ({u-v \over 2}) \cos ({u+v \over 2}) \\
+    \cos u + \cos v = 2 \cos ({u+v \over 2}) \cos ({u-v \over 2}) \\
+    \cos u - \cos v = 2 \sin ({v+u \over 2}) \sin ({v-u \over 2}) \\
+    \sin u \cos v = {1 \over 2}[\sin(u+v) + \sin(u-v)] \\
+    \sin u \sin v = {1 \over 2}[\cos(u-v) - \cos(u+v)] \\
+    \cos u \cos v = {1 \over 2}[\cos(u+v) + \cos(u-v)]
+  \end{align*}
+
+  \textbf{17: Ideal Gas Law}
+  \begin{align*}
+    \Delta l = \alpha l_0 \Delta T;
+    \Delta V = \beta V_0 \Delta T \\
+    \Delta V \approx V_0 [3 \alpha \Delta T + 3 (\alpha \Delta T)^2 +
+    (\alpha \Delta T)^3] \\
+    \Delta l = {1 \over E} {F \over A} l_0 \text{ (stress) };
+  \end{align*}
+
+  \textbf{18: Kinetic Theory of Gases}
+  \begin{align*}
+    \bar{K}_{trans} = \frac{1}{2} m \bar{v^2} = \frac{3}{2} k_B T \\
+    v_{rms} = \sqrt{\frac{3k_BT}{m}} \\
+    \int_0^\infty f(v) dv = N \\
+    \bar{v} = \frac{\int_0^\infty vf(v) dv}{N} = \sqrt{\frac{8k_BT}{\pi m}} \\
+    v_p = \sqrt{\frac{2k_BT}{m}} \\
+    \left( P+\frac{a}{(V/n)^2} \right) \left( \frac{V}{n}-b \right) = RT \\
+    \text{humid } = \frac{\text{part. P}}{\text{sat. vap. P}}\\
+    \text{mean free path: } l_M = \frac{1}{4\pi\sqrt{2}r^2(N/V)}
+  \end{align*}
+
+  \textbf{19: Heat \& First Law}
+  \begin{align*}
+    E_{int} = \frac{d}{2} nRT;
+    E_{int} = Q - W \\
+    Q = mL;
+    dQ = mcdT \\
+    W = \int_{V_A}^{V_B} P dV = \int_{l_A}^{l_B} \vec{F} \cdot d \vec{l} \\
+    \text{(isotherm) } W = nRT \ln \frac{V_B}{V_A} \\
+    \text{(isochoric) } W = 0 \\
+    \text{(isobaric) } W = P \Delta V \\
+    \text{(adiabatic) } W = -\Delta E_{int}\\
+    C_P - C_V = R; C_V = \frac{d}{2} R \\
+    P_1V_1^\gamma = P_2V_2^\gamma; \gamma = \frac{C_P}{C_V} \\
+    \frac{dQ}{dt} = -kA \frac{dT}{dx} \text{ (cond.)} \\
+    \frac{\Delta Q}{\Delta t} = \epsilon \sigma A T^4 \text{ (rad.)} \\
+  \end{align*}
+
+  \textbf{20: Second Law}
+  \begin{align*}
+    e = \frac{W}{Q_H} = \frac{Q_H - Q_L}{Q_H} = 1 - \frac{Q_L}{Q_H} \\
+    = 1 - \frac{T_L}{T_H} \text{ (carnot)}
+  \end{align*}
+  Carnot = 2 $\times$ isotherm + 2 $\times$ adiabatic
+  \newpage
+  \begin{align*}
+    COP = \frac{Q_L}{W} \text{ (refridge} \\
+    = \frac{T_L}{T_H - T_L} \text{ (Carnot)} \\
+    = \frac{Q_H}{W} \text{ (heat pump)} \\
+    dS = \frac{dQ}{T} \text{ (state var.)} \\
+    \text{(def. for reversible process)} \\
+    \Delta S \geq 0 \text{ (spontaneous)} \\
+    S = k \ln W, W = \text{ \# microstates} \\
+  \end{align*}
+
+\end{multicols}
+
+\end{document}
+\message{ !name(cheat.tex) !offset(-105) }
