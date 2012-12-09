@@ -4,7 +4,7 @@
      "multicol"
      "setspace"
      "geometry"
-     "a5paper"
+     "a4paper"
      "landscape"
      "graphicx"
      "amssymb"

@@ -232,8 +232,8 @@
     e = \frac{W}{Q_H} = \frac{Q_H - Q_L}{Q_H} = 1 - \frac{Q_L}{Q_H} \\
     = 1 - \frac{T_L}{T_H} \text{ (carnot)} \\
     \text{Carnot = 2 $\times$ isotherm + 2 $\times$ adiabatic} \\
-    COP = \frac{Q_L}{W} \text{ (refridge} \\
-    = \frac{T_L}{T_H - T_L} \text{ (Carnot)} \\
+    COP = \frac{Q_L}{W} \text{ (refridge)} = \frac{T_L}{T_H - T_L} \text{
+      (Carnot)} \\
     = \frac{Q_H}{W} \text{ (heat pump)} \\
     dS = \frac{dQ}{T} \text{ (state var.)} \\
     \text{(def. for reversible process)} \\
@@ -247,7 +247,6 @@
     \vec{F_{12}} = \frac{kQ_1Q_2}{r^2_{21}} \hat{r_{21}} \\
     \vec{E} = \frac{\vec{F}}{q} = \frac{kQ}{r}
     = \vec{E_1} + \vec{E_2} + \cdots \\
-    \text{( $\vec{E}$ superposition by vector addition)} \\
     E = \frac{\sigma}{2\epsilon_0} \text{ ($\infty$ plane,
       $\sigma$ for one side)} \\
     E = \frac{\sigma}{\epsilon_0} \text{ (close, oppositely
@@ -255,8 +254,7 @@
     \text{ ($E$ in cond. cancels out, so $q$ in cond. = 0) } \\
     \vec{\tau} = \vec{p} \times \vec{E};
     p = Ql \text{ ( dipole moment ) } \\
-    W = \int_{\theta_1}^{\theta_2} \tau d\theta \text{ (dipole) } \\
-    U = -W = -\vec{p} \cdot \vec{E} \\
+    W = \int_{\theta_1}^{\theta_2} \tau d\theta \text{ (dipole) }; U = -W = -\vec{p} \cdot \vec{E} \\
     E = \frac{kp}{(r^2+l^2/4)^{3/2}} \text{ ($\perp$ bisector of dipole) } \\
   \end{align*}
   
@@ -301,6 +299,37 @@
     E_D = \frac{E_{0}}{K} \\
     \text{Induced $\vec{E}$ in dielectric} \\
     E_{\text{ind}} = E_{0}(1-1/K), \therefore \sigma_{\text{ind}} = \sigma(1-1/K) \\
+  \end{align*}
+  
+  \textbf{25: Resistivity}
+  \begin{align*}
+    \bar{P} = I_{\text{rms}}V_{\text{rms}} = I_{\text{rms}}^2 R
+    = \frac{V_{\text{rms}}^2}{R} \\
+    j = \frac{I}{A}, I = \int \vec{j} \cdot d\vec{A},
+    \vec{j} = \frac{1}{\rho} \vec{E}
+  \end{align*}
+  
+  \textbf{27: Magnetism}
+  \begin{align*}
+    I \iff B, I \text{ and } B \iff F \\
+    \vec{F} = I \vec{l} \times \vec{B}
+    = q \vec{v} \times \vec{B} \\
+    \vec{\mu} = NI \vec{A_{\text{encl}}} \text{ (magnetic dipole moment)} \\
+    \vec{\tau} = \vec{\mu} \times \vec{B} = NI\vec{A} \times \vec{B} \\
+    U = -\vec{\mu} \cdot \vec{B} \text{ ($U = 0$ at $\theta = \pi/2$)}
+  \end{align*}
+  
+  \textbf{28: Sources of Magnetism}
+  \begin{align*}
+    \oint \vec{B} \cdot d \vec{l} = \mu_0 I_{\text{encl}}
+    \text{ (Ampere's Law)} \\
+    \vec{B} = \frac{\mu_0I}{4 \pi} \int \frac{d\vec{l} \times \hat{r}}{r^2}
+    \text{ (Biot-Savart Law)} \\
+    B = \frac{\mu_0 I}{2 \pi r} \text{ (near long straight wire)} \\
+    B = \mu_0\frac{N}{l}I \text{ (solenoid)} \\
+    B = \frac{\mu_0 I R^2}{2(R^2+x^2)^{3/2}} \text{ (current loop)} \\
+    B = \frac{\mu_0}{2 \pi}\frac{\mu}{(R^2+x^2)^{3/2}} \text{ (magnetic
+      dipole)}
   \end{align*}
 
 \end{multicols}
